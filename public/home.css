@@ -551,7 +551,7 @@
     
   }
    .postcontainer {
-    width:  300px;
+    width: 381px;
     height: 400px;
     overflow: auto;
     
@@ -935,6 +935,9 @@ align-items: start;
 justify-content: space-around;
 
 }
+.head{
+  margin-right: 40px;
+}
 .postcontainer a{
   position: relative;
   z-index: 2;
@@ -996,10 +999,14 @@ transform: translateX(-100%);
     
   .alldatacontainer{
     z-index: -1;
+   
   }
 .modal-content {
 width: 95%;
 
+}
+.head{
+  margin-left: 40px;
 }
 .alumni{
   height: 150px;
