@@ -7,249 +7,221 @@
   <style>
 /* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background: #ffffff;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #ffffff;
+    text-align: center;
 }
 
 .h2 {
-  background: linear-gradient(135deg, #1e1e1e, #444);
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  width: 90%;
-  max-width: 900px;
-  margin: 10px auto;
-  text-align: center;
+    background: linear-gradient(135deg, #1e1e1e, #444);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .branch {
-  color: rgb(84, 77, 77);
-  padding: 1px;
-  border-radius: 8px;
-  margin: 10px auto;
-  width: 90%;
-  max-width: 200px;
-  height: 45px;
+    color: rgb(84, 77, 77);
+    padding: 1px;
+    border-radius: 8px;
+    margin: 4px auto;
+    width: 200px;
+    height: 50px;
 }
-
 .branch h2 {
-  text-align: center;
-  font-size: 16px;
+    text-align: center;
 }
 
 .profile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px;
-  max-width: 100%;
-  margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+    margin: auto;
 }
 
 .profile-card {
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100px;
-  min-width: 90px;
-  max-width: 130px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    min-width: 100px;
+    max-width: 120px;
 }
 
 .profile-card img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid black;
-  margin-bottom: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+    margin-bottom: 5px;
 }
 
 .profile-card p {
-  font-size: 12px;
-  margin: 0;
+    font-size: 12px;
+    margin: 0;
 }
 
 .vbtns {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .vbtns button {
-  padding: 5px 8px;
-  font-size: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 5px 8px;
+    font-size: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .vbtns button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .back-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 8px 12px;
-  background: gray;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  width: fit-content;
-  font-size: 14px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
 }
 
 .back-btn:hover {
-  background: darkgray;
+    background: darkgray;
 }
 
 .nostudent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 16px;
-  background-color: rgb(179, 63, 63);
-  color: white;
-  height: auto;
-  min-height: 40px;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 8px;
-  margin: 10px auto;
-  padding: 10px;
-  font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    font-size: 18px;
+    background-color: rgb(179, 63, 63);
+    color: white;
+    height: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 10px auto;
+    font-weight: bold;
 }
 
 .user-table {
-  width: 95%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-size: 14px;
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13px;
 }
 
-.user-table th,
-.user-table td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
+.user-table th, .user-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
 }
 
 .user-table th {
-  background: #acb1b7;
-  color: white;
+    background: #acb1b7;
+    color: white;
 }
 
 .user-table img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
 }
 
 .connect-btn {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
 }
 
 .connect-btn.connect {
-  background-color: green;
+    background-color: green;
 }
 
 .connect-btn.disconnect {
-  background-color: red;
+    background-color: red;
 }
 
-/* ---------- Responsive Styles ---------- */
+/* Responsive styles */
 @media (max-width: 768px) {
-  .profile-card {
-    width: 120px;
-    max-width: 140px;
-  }
+    .h2 {
+        width: 95%;
+        font-size: 16px;
+    }
 
-  .profile-card img {
-    width: 40px;
-    height: 40px;
-  }
+    .branch {
+        margin: 4px auto;
+        width: 180px;
+        height: 45px;
+    }
 
-  .user-table {
-    font-size: 13px;
-    width: 100%;
-    overflow-x: auto;
-  }
+    .profile-card {
+        min-width: 90px;
+        max-width: 100px;
+        padding: 8px;
+    }
 
-  .user-table th,
-  .user-table td {
-    padding: 8px;
-  }
+    .profile-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-card p {
+        font-size: 11px;
+    }
+
+    .vbtns button {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+
+    .nostudent {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .user-table {
+        font-size: 12px;
+    }
+
+    .user-table th, .user-table td {
+        padding: 6px;
+    }
+
+    .user-table img {
+        width: 35px;
+        height: 35px;
+    }
 }
-
-@media (max-width: 480px) {
-  .h2,
-  .branch,
-  .nostudent {
-    width: 95%;
-  }
-
-  .profile-card {
-    width: 90%;
-    max-width: 180px;
-    padding: 8px;
-  }
-
-  .profile-card img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .profile-card p {
-    font-size: 10px;
-  }
-
-  .vbtns button {
-    padding: 4px 6px;
-    font-size: 9px;
-  }
-
-  .back-btn {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .nostudent {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .user-table {
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .connect-btn {
-    font-size: 10px;
-    padding: 4px 6px;
-  }
-}
-
 
   </style>
 </head>
