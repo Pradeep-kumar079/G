@@ -20,7 +20,24 @@
   z-index: 1000;
   border-radius: 0;
 }
-
+.post-actions {
+        position: relative;
+        z-index: 1;
+      }
+      
+      a {
+        z-index: 2;
+        position: relative;
+      }
+      a {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: none;
+      }
 /* Logo */
 .logo {
   color: #EDEDED;
