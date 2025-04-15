@@ -13,346 +13,304 @@
  
 </head>
 <style>
-  body {
-    background-color: #eff1f4;
-    margin: 0;
-    padding: 0;
-  }
-    .postcontainer {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 750px;
-        height: 600px;
-        padding: 10px;
-        margin: auto;
-        overflow: auto;
-        overflow-x: hidden;
-        margin-left: 20px;
-        box-sizing: border-box;
-        padding-top: 0px;
-        margin-left: 30px;
-        border: 1px solid rgb(204, 202, 202);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-      
-      .post {
-         height: auto;
-         width: 650px;
-         margin: 0;
+body {
+  background-color: #eff1f4;
+  margin: 0;
+  padding: 0;
+}
 
-      }
-      
-      .post-user {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-      }
-      
-      .user-profile {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      
-      .postheader {
-        font-weight: bold;
-        font-size: 1rem;
-        height: auto;
-        width: 100%;
-        overflow: hidden;
+.postcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 750px;
+  height: 600px;
+  padding: 10px;
+  margin: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-left: 30px;
+  box-sizing: border-box;
+  padding-top: 0px;
+  border: 1px solid rgb(204, 202, 202);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
-      }
-      
-      .postimg img,
-      .postimg video {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-top: 1px; 
-        object-position: center;
-      }
-      
-      .postdescription {
-        margin-top: 10px;
-        color: #333;
-        margin-bottom: 2px;
-      }
-      
-      .post-actions {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 10px;
-        gap: 10px;
-      }
-       
-      .importantsection{
-        height: 250px;
-        margin-right: 10px;
-        width: 600px;
-        border-radius: 3px;
-        color: black;
-        display: flex;
-        background: rgb(246, 251, 249);
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-       
-      }
-      
-      .importantsection h3{
-        text-align: center;
-       
-      }
+.post {
+  height: auto;
+  width: 650px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.user-profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.postheader {
+  font-weight: bold;
+  font-size: 1rem;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.postimg img,
+.postimg video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1px;
+  object-position: center;
+}
+
+.postdescription {
+  margin-top: 10px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.post-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.postcontainer * {
+  pointer-events: auto;
+}
+
+.importantsection {
+  height: 250px;
+  margin-right: 10px;
+  width: 600px;
+  border-radius: 3px;
+  color: black;
+  display: flex;
+  background: rgb(246, 251, 249);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.importantsection h3 {
+  text-align: center;
+}
 
 .importantsection button {
-    height: 45px;
-    width: 400px;
-    font-size: 16px;
-    color: white;
-    background-image: linear-gradient( 109.6deg,  rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2% );
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  .importantsection i {
-    margin-right: 10px;
-    text-decoration: none;
-    color: white;
-  }
-  .importantsection a{
-    color: white;
-    text-decoration: none;
-  }
-  
-  .rows{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-self: center;
-    height: auto;
-    width: 600px;
-    
-   
-  }
-  .current-user-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 15px 20px;
-    max-width: 500px;
-    margin: 20px auto;
-    height: 350px;
-    width: 295px;
-    gap: 15px;
-    transition: all 0.3s ease;
-  }
-  
-  .current-user-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-  
-  .current-user-avatar img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ccc;
-  }
-  
-  .current-user-info {
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .current-user-info:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .current-user-info h3 {
-    margin: 0;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  
-  .current-user-info h3::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 40px;
-    background-color: #3498db;
-    margin: 8px auto 0;
-    border-radius: 2px;
-  }
-  
-  .current-user-info p {
-    margin: 6px 0;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.4;
-    font-weight: 500;
-  }
-  
-  .connecteduser{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 15px 20px;
-    max-width: 500px;
-    margin: 20px auto;
-    height: 350px;
-    width: 295px;
-    gap: 15px;
-    transition: all 0.3s ease;
-  }
-      
-      
-/* Tablets: Stack vertically if space is tight */
+  height: 45px;
+  width: 400px;
+  font-size: 16px;
+  color: white;
+  background-image: linear-gradient(109.6deg, rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.importantsection i {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.importantsection a {
+  color: white;
+  text-decoration: none;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  height: auto;
+  width: 600px;
+}
+
+.current-user-card, .connecteduser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  height: 350px;
+  width: 295px;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.current-user-card:hover, .connecteduser:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.current-user-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.current-user-info {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.current-user-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.current-user-info h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.current-user-info h3::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  background-color: #3498db;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.current-user-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
-    .postcontainer {
-      width: 90%;
-      padding: 0 10px;
-      margin-left: 0;
-    }
-  
-    .row {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .allposts, .post {
-      width: 93%;
-      height: auto;
-    }
-  
-    .postimg img,
-    .postimg video {
-      max-height: 180px;
-    }
+  .postcontainer {
+    width: 100%;
+    padding: 0 10px;
+    margin-left: 0;
   }
 
-  
-/* Mobile Phones: Single post per row, full width */
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .allposts, .post {
+    width: 93%;
+    height: auto;
+  }
+
+  .postimg img,
+  .postimg video {
+    max-height: 180px;
+  }
+}
+
 @media (max-width: 480px) {
   .rows {
-    display: flex;
     flex-direction: column;
     width: auto;
   }
+
   .head {
     padding-left: 79px;
   }
-    .postcontainer{
-        
-      width: 380px;
-      height: 600px;
-      overflow: auto;
-      overflow-x: hidden;
-      margin-top: 27px;
-      margin-left: 12px;
-      
+
+  .postcontainer {
+    width: 380px;
+    height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: 27px;
+    margin-left: 12px;
   }
-  .current-user-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:
-  #ffffff;
-    border-radius:
-  10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding:
-  15px 20px;
-    max-width: 500px;
-    margin:
-  20px auto;
-    height: 350px;
+
+  .current-user-card, .connecteduser {
     width: 373px;
-    gap:
-  15px;
-    transition:
-  all 0.3s ease;
-    }
-    .connecteduser {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background:
-    #ffffff;
-      border-radius:
-    10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding:
-    15px 20px;
-      max-width: 500px;
-      margin:
-    20px auto;
-      height: 350px;
-      width: 373px;
-      gap:
-    15px;
-      transition:
-    all 0.3s ease;
-    }
-    .allposts, .post {
-        width: 99%;
-        height: auto;
-    }
-  
-    .user-profile {
-      width: 30px;
-      height: 30px;
-  
-    }
-  
-    .postheader {
-      font-size: 0.95rem;
-    }
-  
-    .post-actions {
-      flex-direction: row;
-      gap: 5px;
-    }
-    
-   .importantsection{
+  }
+
+  .allposts, .post {
+    width: 99%;
+    height: auto;
+  }
+
+  .user-profile {
+    width: 30px;
+    height: 30px;
+  }
+
+  .postheader {
+    font-size: 0.95rem;
+  }
+
+  .post-actions {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .importantsection {
     width: 378px;
-    
-   
-   }
-   .importantsection button{
+  }
+
+  .importantsection button {
     width: 250px;
-   }
-  
+  }
+}
   
      
   
