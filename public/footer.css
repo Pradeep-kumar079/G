@@ -75,6 +75,10 @@
       text-align: center;
   }
 }
+
+ 
 @media (max-width:480px){
-  
+  .footer{
+    width: 100%;
+  }
 }
