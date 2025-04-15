@@ -434,12 +434,12 @@
                         <p class="username">Unknown User</p>
                       <% } %>
                     </div>
-          
+                        <!-- MEDIA -->
+                    <a href="/allpost/<%= post._id %>">
                     <!-- TITLE -->
                     <div class="postheader"><%= post.title %></div>
           
-                    <!-- MEDIA -->
-                    <a href="/allpost/<%= post._id %>">
+                  
                       <% if (post.postimg) { %>
                         <div class="postimg"><img src="/upload/<%= post.postimg %>" alt="Post Image"></div>
                       <% } else if (post.videopost) { %>
