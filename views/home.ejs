@@ -450,7 +450,7 @@ all 0.3s ease;
                     <div class="post-user">
                       <% if (post.user) { %>
                         <a href="/profile/<%= post.user._id %>" class="user-link">
-                          <img class="user-profile" src="/upload/<%= post.user.profileimg || 'defaultimg.jpeg' %>" >
+                          <img class="user-profile" src="/upload/<%= post.user.profileimg || 'defaultimg.jpeg' %> >
                           <p class="username"><%= post.user.username %></p>
                         </a>
                       <% } else { %>
@@ -503,7 +503,7 @@ all 0.3s ease;
                     <% if (user) { %>
                         <div class="current-user-card">
                           <div class="current-user-avatar">
-                            <img src="/upload/<%= user.profileimg || 'default.jpg' %>" alt="Profile Image">
+                            <img src="/upload/<%= user.profileimg || 'default.jpg' %>" >
                           </div>
                           <div class="current-user-info">
                             <h3><%= user.username %></h3>
@@ -544,7 +544,7 @@ all 0.3s ease;
             <div class="image-row">
               <% events.forEach(event => { %>
                 <% if (event.postimg) { %>
-                  <img src="/upload/<%= event.postimg %>" alt="event image" />
+                  <img src="/upload/<%= event.postimg %>" />
                 <% } %>
               <% }) %>
             </div>
