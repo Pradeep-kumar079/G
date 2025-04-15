@@ -223,8 +223,7 @@
     width: 70px;
     margin-left: 20px;
   }
-  .rows{
-    display: none;
+   
 }
 }
 
@@ -577,7 +576,7 @@
       margin-left: 40px;
   }
 
-  .postheader {
+/*   .postheader {
       font-size: 13px; 
       padding: 5px;
   }
@@ -599,7 +598,7 @@
       flex-direction: column;  
       align-items: center;
       justify-content: center;
-  } 
+  }  */
   .alumnis{
     display: none;
   }
