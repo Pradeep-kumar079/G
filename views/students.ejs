@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-   /* Base Styles */
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -19,7 +19,7 @@ body {
   color: white;
   padding: 10px;
   border-radius: 6px;
-  width: 100%;
+  width: 90%;
   max-width: 900px;
   margin: 10px auto;
   text-align: center;
@@ -32,7 +32,7 @@ body {
   margin: 10px auto;
   width: 90%;
   max-width: 200px;
-  height: 40px;
+  height: 45px;
 }
 
 .branch h2 {
@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px;
   max-width: 100%;
   margin: auto;
@@ -52,7 +52,7 @@ body {
 
 .profile-card {
   background: #fff;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -61,12 +61,12 @@ body {
   text-align: center;
   width: 100px;
   min-width: 90px;
-  max-width: 120px;
+  max-width: 130px;
 }
 
 .profile-card img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid black;
@@ -74,7 +74,7 @@ body {
 }
 
 .profile-card p {
-  font-size: 11px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -83,12 +83,12 @@ body {
 }
 
 .vbtns button {
-  padding: 4px 6px;
+  padding: 5px 8px;
   font-size: 10px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -121,11 +121,13 @@ body {
   font-size: 16px;
   background-color: rgb(179, 63, 63);
   color: white;
-  height: 36px;
+  height: auto;
+  min-height: 40px;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 8px;
   margin: 10px auto;
+  padding: 10px;
   font-weight: bold;
 }
 
@@ -135,13 +137,13 @@ body {
   border-collapse: collapse;
   background: white;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;
   font-size: 14px;
 }
 
 .user-table th,
 .user-table td {
-  padding: 8px;
+  padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 }
@@ -152,15 +154,15 @@ body {
 }
 
 .user-table img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid black;
 }
 
 .connect-btn {
-  padding: 4px 8px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   color: white;
@@ -176,11 +178,16 @@ body {
   background-color: red;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Responsive Styles ---------- */
 @media (max-width: 768px) {
   .profile-card {
-    width: 45%;
+    width: 120px;
     max-width: 140px;
+  }
+
+  .profile-card img {
+    width: 40px;
+    height: 40px;
   }
 
   .user-table {
@@ -189,18 +196,21 @@ body {
     overflow-x: auto;
   }
 
-  .user-table th, .user-table td {
-    padding: 6px;
+  .user-table th,
+  .user-table td {
+    padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .h2, .branch {
+  .h2,
+  .branch,
+  .nostudent {
     width: 95%;
   }
 
   .profile-card {
-    width: 80%;
+    width: 90%;
     max-width: 180px;
     padding: 8px;
   }
@@ -215,7 +225,7 @@ body {
   }
 
   .vbtns button {
-    padding: 4px;
+    padding: 4px 6px;
     font-size: 9px;
   }
 
@@ -226,12 +236,12 @@ body {
 
   .nostudent {
     font-size: 14px;
-    height: auto;
     padding: 8px;
   }
 
   .user-table {
     font-size: 12px;
+    width: 100%;
   }
 
   .connect-btn {
