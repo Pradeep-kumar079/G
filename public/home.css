@@ -551,9 +551,11 @@
     
   }
    .postcontainer {
-    width: 381px;
-    height: 400px;
-    overflow: auto;
+    width: 371px;
+    height: 600px;
+    overflow:
+auto;
+    margin-top: 27px;
     
   } 
 /* 
