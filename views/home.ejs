@@ -267,7 +267,7 @@
 /* Mobile Phones: Single post per row, full width */
 @media (max-width: 480px) {
   .rows {
-    display: flex;
+     display: flex;
     flex-direction: column;
     width: auto;
     padding:0;
@@ -287,35 +287,16 @@
 
     .postcontainer{
         
-      width: 410px;
-      height: 600px;
-      overflow: auto;
-      margin-top: 27px;
-      margin-left: 2px;
+      width: 407px;
+    height: 600px;
+    overflow:
+auto;
+    margin-top: 27px;
+    margin-left: 8px;
       
   }
   .current-user-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:
-  #ffffff;
-    border-radius:10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding:15px 20px;
-    max-width: 500px;
-    margin-left: 0px;
-    height: 350px;
-    width: 373px;
-    gap:
-  15px;
-    transition:
-  all 0.3s ease;
-  width: 357px;
-  
-    }
-    .connecteduser {
-      display: flex;
     flex-direction: column;
     align-items: center;
     background:
@@ -325,24 +306,42 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     padding:
 15px 20px;
-    max-width: 500px;
-    margin:
-20px auto;
-    margin-left: auto;
+    margin-left: 37px;
     height: 350px;
-    width: 373px;
     gap:
 15px;
     transition:
 all 0.3s ease;
-    width: 357px;
-    margin-left: 7px;
+    width: 405px;
+  
+    }
+    .connecteduser {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:
+    #ffffff;
+      border-radius:
+    10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding:
+    15px 20px;
+     
+      margin:
+    20px auto;
+      height: 350px;
+      width: 392px;
+      gap:
+    15px;
+      transition:
+    all 0.3s ease;
+   
+   
     }
 
     .importantsection{
-      width: 371px;
-      margin-left: 0px;
-      margin-right: 38px;
+      width: 405px;
+     
     
      }
   }
@@ -374,6 +373,24 @@ all 0.3s ease;
    }
    .importantsection a{
     text-align: center;
+   }
+   @media (max-width:400px){
+    .importantsection{
+      width: 352px;
+    margin-left: 8px;
+    }
+    .current-user-card{
+      width: 352px;
+      margin-left: 7px;
+    }
+    .postcontainer{
+        width: 358px;
+        margin:
+    0px;
+    }
+    .connecteduser{
+      width: 352px;
+    }
    }
   
   
@@ -450,7 +467,7 @@ all 0.3s ease;
                     <div class="post-user">
                       <% if (post.user) { %>
                         <a href="/profile/<%= post.user._id %>" class="user-link">
-                          <img class="user-profile" src="/upload/<%= post.user.profileimg || 'defaultimg.jpeg' %> >
+                          <img class="user-profile" src="/upload/<%= post.user.profileimg || 'defaultimg.jpeg' %>" >
                           <p class="username"><%= post.user.username %></p>
                         </a>
                       <% } else { %>
@@ -503,7 +520,7 @@ all 0.3s ease;
                     <% if (user) { %>
                         <div class="current-user-card">
                           <div class="current-user-avatar">
-                            <img src="/upload/<%= user.profileimg || 'default.jpg' %>" >
+                            <img src="/upload/<%= user.profileimg || 'default.jpg' %>" alt="Profile Image">
                           </div>
                           <div class="current-user-info">
                             <h3><%= user.username %></h3>
@@ -544,7 +561,7 @@ all 0.3s ease;
             <div class="image-row">
               <% events.forEach(event => { %>
                 <% if (event.postimg) { %>
-                  <img src="/upload/<%= event.postimg %>" />
+                  <img src="/upload/<%= event.postimg %>" alt="event image" />
                 <% } %>
               <% }) %>
             </div>
